@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newspaper Musemind</title>
+  <!-- Google font cdn link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+  <!-- Font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Remixicon cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css"/>
+  <!-- Tailwind css file link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- css file link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+
+      fontFamily: {
+        Poppins: ['Poppins', 'sans-serif'],
+        playFairDisplay: ['Playfair Display', 'serif']
+      },
+      extend: {
+        
+      }
+      },
+    }
+  </script>
+</head>
+<body>
+
+  <header class="bg-[url(../assets/img/header-bg.png)] w-full bg-no-repeat bg-cover bg-center">
+    <div class="container mx-auto">
+      <div class="grid grid-rows-2 grid-cols-2 lg:flex lg:justify-between lg:items-center gap-[40px] md:gap-0 mx-5 lg:mx-0 pt-10 relative">
+        <div class="">
+          <a href="#" class="relative cursor-pointer">
+            <span class="absolute w-[30px] h-[3px] rounded-full bg-white top-0 left-0"></span>
+            <span class="absolute w-[27px] h-[3px] rounded-full bg-white top-[8px] left-0"></span>
+            <span class="absolute w-[24px] h-[3px] rounded-full bg-white top-[16px] left-0"></span>
+          </a>
+        </div>
+        <a href="#" class="absolute lg:static top-[25px] right-0">
+          <img src="./assets/img/logo.png" alt="">
+        </a>
+        <div class="space-x-10 col-span-full lg:col-auto">
+          <button class="text-[18px] text-white font-Poppins">Sign In</button>
+          <button class="text-[18px] text-[#000E13] w-[170px] h-[50px] bg-white font-Poppins font-medium">Subscribe Now</button>
+        </div>
+      </div>
+      <nav class="mt-10 mx-5 lg:mx-0 pb-4 border-b-2">
+        <ul class="flex flex-wrap justify-between items-center gap-10">
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">World</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Politics</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Business</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Tech</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Wild Life</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Sports</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Food</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Travel</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Entertainment</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Magazine</a></li>
+          <li><a href="#" class="text-[#EBE8E4] text-[18px] hover:text-white">Other</a></li>
+        </ul>
+      </nav>
+
+      <div class=" h-full mx-5 lg:flex lg:flex-row lg:justify-between lg:items-center lg:mx-0 py-[90px]">
+        <div class="lg:w-[600px]">
+          <h3 class="font-playFairDisplay text-[32px] text-white">03/<sub class="text-[#DFE0E0]">03</sub></h3>
+          <h3 class="text-[#D0D0CB] text-[32px] font-medium mt-8">the project ‘highly ambitious.</h3>
+          <h2 class="text-[40px] font-semibold text-white">Iran's iconic tower flashes red for Chinese New Year.</h2>
+          <div class="flex flex-col gap-5 mt-10 mb-14 sm:flex sm:flex-row">
+            <div>
+              <i class="ri-arrow-right-up-line inline-block w-[50px] h-[50px] leading-[50px] text-center border border-[#fff] text-[22px] text-white"></i>
+              <span class="text-[18px] text-white font-semibold font-Poppins ml-[16px]">Read Article</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-play h-[50px] w-[50px] leading-[50px] text-center border border-[#fff] rounded-full text-white"></i>
+              <span class="text-[18px] text-white font-semibold font-Poppins ml-[16px]">Play Video</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 mb-[60px] sm:flex sm:flex-row">
+            <div class="w-[200px]">
+              <img src="./assets/img/header-img-1.png" alt="">
+              <h4 class="text-[18px] font-semibold text-white mt-[16px]">20th anniversary Audi RS 6.</h4>
+              <span class="text-[14px] text-[#C5C5C5]">3 hours ago</span>
+            </div>
+            <div class="w-[200px]">
+              <img src="./assets/img/header-img-2.png" alt="">
+              <h4 class="text-[18px] font-semibold text-white mt-[16px]">Octopuses are problem-solvers</h4>
+              <span class="text-[14px] text-[#C5C5C5]">3 hours ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[24px]">
+          <div class="flex w-[375px]">
+            <img src="./assets/img/header-img-3.png" alt="">
+            <div class="bg-[#828282] opacity-25 py-[20px] px-[20px]">
+              <div><span class="text-[#CBCBCB] mr-4">18 ago</span> <span class="text-[#CBCBCB]">Food</span></div>
+              <h4 class="text-[24px] text-white font-semibold">From field to plate: A mango’s...</h4>
+            </div>
+          </div>
+          <div class="flex w-[375px]">
+            <img src="./assets/img/header-img-4.png" alt="">
+            <div class="bg-[#828282] opacity-25 py-[20px] px-[20px]">
+              <div><span class="text-[#CBCBCB] mr-4">18 ago</span> <span class="text-[#CBCBCB]">Food</span></div>
+              <h4 class="text-[24px] text-white font-semibold">Arrest Gotabaya: Rights group...</h4>
+            </div>
+          </div>
+          <div class="flex w-[375px]">
+            <img src="./assets/img/header-img-5.png" alt="">
+            <div class="bg-[#828282] opacity-25 py-[20px] px-[20px]">
+              <div><span class="text-[#CBCBCB] mr-4">18 ago</span> <span class="text-[#CBCBCB]">Food</span></div>
+              <h4 class="text-[24px] text-white font-semibold">US bakes in record heatwave..</h4>
+            </div>
+          </div>
+          <div class="flex w-[375px]">
+            <img src="./assets/img/header-img-6.png" alt="">
+            <div class="bg-[#828282] opacity-25 py-[20px] px-[20px]">
+              <div><span class="text-[#CBCBCB] mr-4">18 ago</span> <span class="text-[#CBCBCB]">Food</span></div>
+              <h4 class="text-[24px] text-white font-semibold">Science and Data Change Soccer’s...</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <section class="py-[120px]">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center mx-5 mb-[55px] lg:mx-0">
+        <h2 class="text-[40px] font-semibold text-[#000]">Most Read</h2>
+        <div class="flex gap-[34px]">
+          <i class="fa-solid fa-chevron-left w-[50px] h-[50px] leading-[50px] border border-[#585858] text-center cursor-pointer hover:bg-[#000] hover:text-white"></i>
+          <i class="fa-solid fa-chevron-right w-[50px] h-[50px] leading-[50px] border border-[#585858] text-center cursor-pointer hover:bg-[#000] hover:text-white"></i>
+        </div>
+      </div>
+      <div class="mx-5 flex flex-col gap-[60px] lg:flex lg:flex-row lg:gap-[24px] lg:mx-0">
+        <div class="flex flex-col gap-10 lg:w-[49%]">
+          <div class="flex flex-col gap-10 sm:flex sm:flex-row sm:gap-5">
+            <div class="sm:w-[49%]">
+              <img src="./assets/img/most-read-img-1.png" class="w-full h-[360px]" alt="">
+              <div class="mt-6">
+                <div class="text-[#484F4F] "><span class="mr-5">30m ago</span> <span>Global Economy</span></div>
+                <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India has zero tolerance for rupee...</h3>
+                <div class="flex justify-between">
+                  <div class="flex items-center">
+                    <img src="./assets/img/repoter-by-1.png" alt="">
+                    <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Jacob Jones</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                    <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm:w-[49%]">
+              <img src="./assets/img/most-read-img-2.png" class="w-full h-[360px]" alt="">
+              <div class="mt-6">
+                <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+                <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+                <div class="flex justify-between">
+                  <div class="flex items-center">
+                    <img src="./assets/img/repoter-by-2.png" alt="">
+                    <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                    <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-10 sm:flex sm:flex-row sm:gap-5">
+            <div class="sm:w-[49%]">
+              <img src="./assets/img/most-read-img-3.png" class="w-full h-[360px]" alt="">
+              <div class="mt-6">
+                <div class="text-[#484F4F] "><span class="mr-5">35m ago</span> <span>Bangladesh</span></div>
+                <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">Bangladesh Railway reserves dynamite...</h3>
+                <div class="flex justify-between">
+                  <div class="flex items-center">
+                    <img src="./assets/img/repoter-by-3.png" alt="">
+                    <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Jerome</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                    <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm:w-[49%]">
+              <img src="./assets/img/most-read-img-4.png" class="w-full h-[360px]" alt="">
+              <div class="mt-6">
+                <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>Europe</span></div>
+                <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">EU mulls replacing Russian gas with...</h3>
+                <div class="flex justify-between">
+                  <div class="flex items-center">
+                    <img src="./assets/img/repoter-by-4.png" alt="">
+                    <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Eleanor Pena</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                    <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-[49%]">
+          <div class="bg-[url('../assets/img/most-read-img-5.png')] h-[700px] lg:h-full bg-no-repeat bg-cover relative">
+            <div class="mx-[40px] absolute bottom-[80px] lg:bottom-[185px]">
+              <div class="text-[18px] flex gap-4 mb-[24px]"><span class="text-white">Technology</span> <span class="text-[#B0B0B0]">Startup</span></div>
+              <h3 class="text-[32px] text-white font-semibold">How to track James Webb Space Telescope on the go...</h3>
+              <div class="flex flex-col gap-[30px] mt-10 md:flex md:flex-row">
+                <div>
+                  <i class="ri-arrow-right-up-line inline-block w-[50px] h-[50px] leading-[50px] text-center border border-[#fff] text-[22px] text-white"></i>
+                  <span class="text-[18px] text-white font-semibold font-Poppins ml-[16px]">Read Article</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-play h-[50px] w-[50px] leading-[50px] text-center border border-[#fff] rounded-full text-white"></i>
+                  <span class="text-[18px] text-white font-semibold font-Poppins ml-[16px]">Play Video</span>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-[#000] pt-[120px] pb-[200px]">
+    <div class="container mx-auto">
+      <div class="mb-[50px] flex flex-col gap-7 md:flex md:flex-row md:justify-between md:items-center mx-5 md:mx-0">
+        <h3 class="text-white text-[40px] font-semibold">Interesting</h3>
+        <div class="flex flex-row gap-[24px]">
+          <a href="#" class="text-white text-[18px] font-medium py-[14px] px-[20px] border border-[#FFF] hover:bg-[#fff] hover:text-[#000] inline-block">All</a>
+          <a href="#" class="text-white text-[18px] font-medium py-[14px] px-[20px] border border-[#FFF] hover:bg-[#fff] hover:text-[#000] inline-block">Most Poppular </a>
+          <a href="#" class="text-white text-[18px] font-medium py-[14px] px-[20px] border border-[#FFF] hover:bg-[#fff] hover:text-[#000] inline-block">Last</a>
+        </div>
+      </div>
+      <div class="bg-[url('../assets/img/interesting-bg-img.png')] bg-no-repeat bg-cover bg-center py-[40px] px-5 lg:px-10 lg:relative">
+        <div>
+          <div><span class="text-[#E8E8E8] text-[18px] mr-3 font-playFairDisplay">News</span> <span class="text-[18px] text-[#fff] font-playFairDisplay font-semibold">Health</span></div>
+          <h2 class="text-white text-[40px] font-semibold mt-8 mb-[50px]">Go Natural! Engage With Nature To Improve Well-Being,</h2>
+          <div class="mb-[100px]">
+            <i class="ri-arrow-right-up-line inline-block w-[50px] h-[50px] leading-[50px] text-center border border-[#fff] text-[22px] text-white"></i>
+            <span class="text-[18px] text-white font-semibold font-Poppins ml-[16px]">Read Article</span>
+          </div>
+          <img src="./assets/img/interesting-img-1.png" alt="">
+        </div>
+        <div class="hidden lg:absolute lg:-bottom-[85px] lg:right-0 lg:flex lg:gap-6">
+          <img src="./assets/img/interesting-img-2.png" alt="">
+          <img src="./assets/img/interesting-img-3.png" alt="">
+          <img src="./assets/img/interesting-img-4.png" alt="">
+          <img src="./assets/img/interesting-img-5.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="py-[120px]">
+    <div class="container mx-auto">
+      <div class="mb-[50px] flex flex-col gap-7 md:flex md:flex-row md:justify-between md:items-center mx-5 md:mx-0">
+        <h3 class="text-[#000] text-[40px] font-semibold">Recents</h3>
+        <div class="flex flex-row gap-[24px]">
+          <a href="#" class="text-[#000] text-[18px] font-medium py-[14px] px-[20px] border border-[#000] hover:bg-[#000] hover:text-[#fff] inline-block">All</a>
+          <a href="#" class="text-[#000] text-[18px] font-medium py-[14px] px-[20px] border border-[#000] hover:bg-[#000] hover:text-[#fff] inline-block">Most Poppular </a>
+          <a href="#" class="text-[#000] text-[18px] font-medium py-[14px] px-[20px] border border-[#000] hover:bg-[#000] hover:text-[#fff] inline-block">Last</a>
+        </div>
+      </div>
+
+      <div class="mx-5 lg:mx-0 flex flex-col gap-[48px]">
+        <div class="grid grid-cols-1 grid-rows-4 gap-5 sm:grid sm:grid-cols-2 sm:grid-rows-2 xl:grid xl:grid-cols-4 xl:grid-rows-1">
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-1.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">30m ago</span> <span>Global Economy</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India has zero kamran tolerance for rupee...</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-1.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Jacob Jones</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-2.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-2.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-3.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-2.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-4.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-2.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 grid-rows-4 gap-5 sm:grid sm:grid-cols-2 sm:grid-rows-2 xl:grid xl:grid-cols-4 xl:grid-rows-1">
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-5.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">30m ago</span> <span>Global Economy</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India has zero tolerance kamran for rupee...</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-1.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Jacob Jones</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-6.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-2.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-7.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-2.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-[]">
+            <img src="./assets/img/Recents-img-8.png" class="w-full h-[360px]" alt="">
+            <div class="mt-6">
+              <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+              <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <img src="./assets/img/repoter-by-2.png" alt="">
+                  <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="xl:flex xl:justify-between xl:items-center xl:gap-6">
+          <div class="sm:grid sm:grid-rows-1 sm:grid-cols-2 sm:gap-5 xl:grid xl:grid-rows-2 xl:grid-cols-1">
+            <div class="sm:w-[]">
+              <img src="./assets/img/Recents-img-9.png" class="w-full h-[360px]" alt="">
+              <div class="mt-6">
+                <div class="text-[#484F4F] "><span class="mr-5">30m ago</span> <span>Global Economy</span></div>
+                <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India has zero tolerance kamran for rupee...</h3>
+                <div class="flex justify-between">
+                  <div class="flex items-center">
+                    <img src="./assets/img/repoter-by-1.png" alt="">
+                    <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Jacob Jones</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                    <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm:w-[]">
+              <img src="./assets/img/Recents-img-10.png" class="w-full h-[360px]" alt="">
+              <div class="mt-6">
+                <div class="text-[#484F4F] "><span class="mr-5">20m ago</span> <span>India</span></div>
+                <h3 class="text-[24px] text-[#000] font-semibold mt-[8px] mb-[16px]">India’s forex reserves at 20-month low..</h3>
+                <div class="flex justify-between">
+                  <div class="flex items-center">
+                    <img src="./assets/img/repoter-by-2.png" alt="">
+                    <span class="ml-[12px] text-[#000E13] font-semibold text-[12px]">by Ralph Ed</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                    <i class="fa-regular fa-bookmark w-[36px] h-[36px] bg-[#F1F1F1] leading-[32px] text-center rounded-full"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[url('../assets/img/Recents-img-L.png')] bg-no-repeat bg-cover bg-center px-5 h-[700px] xl:h-[1140px] xl:w-full xl:px-10 mt-[40px] relative">
+            <div class="absolute bottom-[40px] xl:bottom-[220px]">
+              <div class="text-white text-[18px] mb-6"><span class="mr-5">News</span> <span>Economy</span></div>
+              <h3 class="text-[#ECECEC] text-[32px] font-medium">Magazine Newsweek has highlighted.</h3>
+              <h2 class="text-white text-[40px] font-semibold mt-3 xl:w-[600px]">Newsweek Highlights Achievements Of Bangladesh.</h2>
+              <div class="mt-[50px]">
+                <i class="ri-arrow-right-up-line inline-block w-[50px] h-[50px] leading-[50px] text-center border border-[#fff] text-[22px] text-white"></i>
+                <span class="text-[18px] text-white font-semibold font-Poppins ml-[16px]">Read Article</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-[#000] py-[120px]">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center mx-5 mb-[55px] lg:mx-0">
+        <h2 class="text-[40px] font-semibold text-[#fff]">TV Shows</h2>
+        <div class="flex gap-[34px]">
+          <i class="fa-solid fa-chevron-left w-[50px] h-[50px] leading-[50px] text-[30px] text-[#585858] border border-[#585858] text-center cursor-pointer hover:text-white hover:border-white"></i>
+          <i class="fa-solid fa-chevron-right w-[50px] h-[50px] leading-[50px] text-[30px] text-[#585858] border border-[#585858] text-center cursor-pointer hover:text-white hover:border-white"></i>
+        </div>
+      </div>
+
+      <div class="grid grid-rows-4 grid-cols-1 gap-[30px] sm:grid sm:grid-rows-2 sm:grid-cols-2 sm:gap-6 xl:grid xl:grid-rows-1 xl:grid-cols-4 mx-5 xl:mx-0">
+        <div class="w-[350px] sm:w-full mx-auto">
+          <div class="relative">
+            <img src="./assets/img/show-img-L-1.png" class="w-full" alt="">
+            <div class="flex gap-4 absolute top-[24px] left-[24px]">
+              <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+              <i class="fa-regular fa-bookmark w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-[25px]">
+            <h4 class="text-[32px] text-white font-semibold">Animale <span class="text-[#DFDFDF] text-[24px] ml-[20px]">30+ Video</span></h4>
+          </div>
+        </div>
+        <div class="w-[350px] sm:w-full mx-auto">
+          <div class="relative">
+            <img src="./assets/img/show-img-L-2.png" class="w-full" alt="">
+            <div class="flex gap-4 absolute top-[24px] left-[24px]">
+              <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+              <i class="fa-regular fa-bookmark w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-[25px]">
+            <h4 class="text-[32px] text-white font-semibold">Animale <span class="text-[#DFDFDF] text-[24px] ml-[20px]">30+ Video</span></h4>
+          </div>
+        </div>
+        <div class="w-[350px] sm:w-full mx-auto">
+          <div class="relative">
+            <img src="./assets/img/show-img-L-3.png" class="w-full" alt="">
+            <div class="flex gap-4 absolute top-[24px] left-[24px]">
+              <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+              <i class="fa-regular fa-bookmark w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-[25px]">
+            <h4 class="text-[32px] text-white font-semibold">Animale <span class="text-[#DFDFDF] text-[24px] ml-[20px]">30+ Video</span></h4>
+          </div>
+        </div>
+        <div class="w-[350px] sm:w-full mx-auto">
+          <div class="relative">
+            <img src="./assets/img/show-img-L-4.png" class="w-full" alt="">
+            <div class="flex gap-4 absolute top-[24px] left-[24px]">
+              <i class="fa-solid fa-share w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+              <i class="fa-regular fa-bookmark w-[36px] h-[36px] border border-[#FFF] text-[#FFF] leading-[36px] text-center rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-[25px]">
+            <h4 class="text-[32px] text-white font-semibold">Animale <span class="text-[#DFDFDF] text-[24px] ml-[20px]">30+ Video</span></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-[120px] mx-5 grid grid-rows-1 grid-cols-2 sm:grid sm:grid-rows-2 sm:grid-cols-3 lg:grid lg:grid-rows-1 lg:grid-cols-6 lg:mx-0 gap-6 lg:border-b-[1px] lg:pb-2">
+        <div class="relative">
+          <img src="./assets/img/show-img-S-1.png" class="lg:w-full" alt="">
+          <h4 class="absolute top-[30px] left-[50px] text-[24px] text-[#FFF]">World</h4>
+        </div>
+        <div class="relative">
+          <img src="./assets/img/show-img-S-2.png" class="lg:w-full" alt="">
+          <h4 class="absolute top-[30px] left-[50px] text-[24px] text-[#FFF]">Politics</h4>
+        </div>
+        <div class="relative">
+          <img src="./assets/img/show-img-S-3.png" class="lg:w-full" alt="">
+          <h4 class="absolute top-[30px] left-[50px] text-[24px] text-[#FFF]">Business</h4>
+        </div>
+        <div class="relative">
+          <img src="./assets/img/show-img-S-4.png" class="lg:w-full" alt="">
+          <h4 class="absolute top-[30px] left-[50px] text-[24px] text-[#FFF]">Opinion</h4>
+        </div>
+        <div class="relative">
+          <img src="./assets/img/show-img-S-5.png" class="lg:w-full" alt="">
+          <h4 class="absolute top-[30px] left-[50px] text-[24px] text-[#FFF]">Wild Life</h4>
+        </div>
+        <div class="relative">
+          <img src="./assets/img/show-img-S-6.png" class="lg:w-full" alt="">
+          <h4 class="absolute top-[30px] left-[50px] text-[24px] text-[#FFF]">Sports</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="bg-[#000]">
+    <div class="container m-auto">
+      <div class="mx-5 grid grid-rows-1 grid-cols-1 gap-10 sm:grid sm:grid-rows-2 sm:grid-cols-2 lg:grid lg:grid-rows-1 lg:grid-cols-4 pb-[120px] border-b-2 border-[#2D2D2D]">
+        <div>
+          <a href="#"><img src="./assets/img/logo.png" alt=""></a>
+        </div>
+        <div>
+          <div class="mb-[50px]">
+            <h3 class="text-white text-[18px] font-bold font-Poppins mb-6">News</h3>
+            <ul>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">World</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">U.S</a>
+              </li>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Business</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Science</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Correction</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[18px] font-bold font-Poppins mb-6">Living</h3>
+            <ul>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Automobiles</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Crossword</a>
+              </li>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">T Magazine</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Jobs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="mb-[50px]">
+            <h3 class="text-white text-[18px] font-bold font-Poppins mb-6">Listing & More</h3>
+            <ul>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Tools & Services</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Times Topics</a>
+              </li>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Blogs</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Travel</a>
+              </li>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Public Editor</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Times Journeys</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[18px] font-bold font-Poppins mb-6">Opinion</h3>
+            <ul>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Today's Opinion</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Contributing Writers</a>
+              </li>
+              <li class="flex gap-[50px]">
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">TOp Columnists</a>
+                <a href="#" class="text-[#8A8A8A] text-[14px] font-medium font-Poppins">Letters</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="mb-[50px]">
+            <h3 class="text-white text-[18px] font-bold font-Poppins mb-6">Subscribe</h3>
+            <form class="bg-[#262626] border border-[#4D4D4D] p-[20px] relative">
+              <input class="bg-transparent text-[#FFF] font-Poppins text-[18px] font-normal" type="text" placeholder="Entar Your Email">
+              <i class="fa-regular fa-paper-plane text-[#FFF] border border-[#FFF] p-[15px] absolute top-[50%] right-[5px] -translate-y-[50%] text-[20px]"></i>
+            </form>
+          </div>
+          <div>
+            <h3 class="text-white text-[18px] font-bold font-Poppins mb-6">Social</h3>
+            <div class="flex gap-5 mt-5"> 
+              <i class="fa-brands fa-facebook-f text-[#8A8A8A] text-[20px] cursor-pointer hover:text-white"></i>
+              <i class="fa-brands fa-google-plus-g text-[#8A8A8A] text-[20px] cursor-pointer hover:text-white"></i>
+              <i class="fa-brands fa-twitter text-[#8A8A8A] text-[20px] cursor-pointer hover:text-white"></i>
+              <i class="fa-brands fa-linkedin text-[#8A8A8A] text-[20px] cursor-pointer hover:text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="py-[20px]">
+        <p class="text-[16px] text-[#8A8A8A] text-center font-Poppins">Copyright © 2022 Musemind  | All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- javascript file link -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
